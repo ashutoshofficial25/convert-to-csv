@@ -1,20 +1,16 @@
 import { flatObjectKeys } from './helper';
-/**
- * Converts a Array of Objects to a CSV.
- *
- * @param object[] data - The array of objects representing the data or table data.
- * @param string   name - File name of exported CSV (Optional).
- * @param string[] fields - If you want to export selected fields from data to CSV (Optional).
- * @param string[] header - If you want to custom CSV header.
- * @returns string - Downloads the CSV & returns The CSV string generated from the table data (Optional).
- */
 
-export function convertToCSV(
-  data: object[],
-  name: string = 'download',
-  selectedFields?: string[],
-  header: string[] = []
-): string {
+interface IProps {
+  data: object[];
+  name?: string;
+  header?: string[];
+}
+
+export function convertToCSV({
+  data,
+  name = 'download',
+  header = [],
+}: IProps): string {
   const separator = ',';
   const lineEnding = '\n';
 
@@ -54,3 +50,6 @@ export function convertToCSV(
 
   return csvContent;
 }
+
+// v2.0
+// selectedFields?: string[];
