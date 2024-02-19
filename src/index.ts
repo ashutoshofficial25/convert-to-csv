@@ -1,3 +1,4 @@
+import { flatObjectKeys } from './helper';
 /**
  * Converts a Array of Objects to a CSV.
  *
@@ -7,8 +8,6 @@
  * @param string[] header - If you want to custom CSV header.
  * @returns string - Downloads the CSV & returns The CSV string generated from the table data (Optional).
  */
-
-import { flatObjectKeys } from './helper';
 
 export function convertToCSV(
   data: object[],
