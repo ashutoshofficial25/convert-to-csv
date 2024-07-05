@@ -47,9 +47,9 @@ or;
 const csv = convertToCSV({ data: users });
 ```
 
-The downloaded CSV file will have the specified custom headers.
+The in csv variable you will get your data as csv format.
 
-To download this data into a CSV file, you can use the convertToCSV function download to true for frontend projects:
+To download this data into a CSV file, you can use the convertToCSV function `download to true` for frontend projects:
 
 ```javascript
 convertToCSV({ data: users, isDownload: true });
