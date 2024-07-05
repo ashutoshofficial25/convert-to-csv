@@ -1,6 +1,6 @@
 {
   "name": "convert-to-csv",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "This package provides a utility function to convert an array of objects into a CSV format, suitable for exporting data from JavaScript applications.",
   "main": "build/src/index.js",
   "keywords": [
