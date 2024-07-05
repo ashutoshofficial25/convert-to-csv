@@ -1,15 +1,20 @@
 {
   "name": "convert-to-csv",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "This package provides a utility function to convert an array of objects into a CSV format, suitable for exporting data from JavaScript applications.",
   "main": "build/src/index.js",
-  "keywords": ["convert-to-csv", "csv" , "array-to-csv" ,"export" , "export-to-csv"],
+  "keywords": [
+    "convert-to-csv",
+    "csv",
+    "array-to-csv",
+    "export",
+    "export-to-csv"
+  ],
   "scripts": {
     "dev": "ts-node-dev index.ts",
     "build": "tsc"
   },
   "author": "Ashutosh Maurya",
-  
   "license": "ISC",
   "devDependencies": {
     "ts-node-dev": "^2.0.0",
@@ -19,9 +24,9 @@
     "type": "git",
     "url": "https://github.com/ashutoshofficial25/convert-to-csv"
   },
-
   "homepage": "https://github.com/ashutoshofficial25/convert-to-csv#readme",
-
-  "files":["build" ,"package*.json"]
- 
+  "files": [
+    "build",
+    "package*.json"
+  ]
 }

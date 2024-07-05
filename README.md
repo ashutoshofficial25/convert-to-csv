@@ -37,10 +37,22 @@ const users = [
 ];
 ```
 
-To download this data into a CSV file, you can use the convertToCSV function:
+### Return CSV only (For Nodejs/ backend projects.)
+
+To get this data into a CSV format, you can use the convertToCSV function:
 
 ```javascript
-convertToCSV({ data: users });
+const csv = convertToCSV({ data: users, isDownload: false });
+or;
+const csv = convertToCSV({ data: users });
+```
+
+The downloaded CSV file will have the specified custom headers.
+
+To download this data into a CSV file, you can use the convertToCSV function download to true for frontend projects:
+
+```javascript
+convertToCSV({ data: users, isDownload: true });
 ```
 
 ### Download CSV with a Custom File Name
@@ -53,7 +65,7 @@ convertToCSV({data : users, name="mycsvfile" })
 
 This will download the CSV file with the name "mycsvfile.csv".
 
-### Download CSV with a Custom Headers
+### Download or get CSV with a Custom Headers
 
 You can also provide custom headers for the CSV file by passing an array of strings to the `header` option. Here's how you can use it:
 

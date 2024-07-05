@@ -4,12 +4,14 @@ interface IProps {
   data: object[];
   name?: string;
   header?: string[];
+  isDownload?: boolean;
 }
 
 export function convertToCSV({
   data,
   name = 'download',
   header = [],
+  isDownload = false,
 }: IProps): string {
   const separator = ',';
   const lineEnding = '\n';
@@ -36,6 +38,10 @@ export function convertToCSV({
     });
     return csv + values.join(separator) + lineEnding;
   }, headers);
+
+  if (!isDownload) {
+    return csvContent;
+  }
 
   const blob = new Blob([csvContent], { type: 'text/csv' });
 
